@@ -15,11 +15,12 @@ const Container = (props) => (<div style={defaultStyle}>{props.children}</div>)
 
 const MyLoader = () => {
   return(
-    <ContentLoader height={140} speed={1} primaryColor={'#333'} secondaryColor={'#999'}>
-      <Circle x={195} y={30} radius={30} />
-      <Rect x={50} y={80} height={10} radius={5} width={300} />
-      <Rect x={75} y={100} height={10} radius={5} width={250} />
-    </ContentLoader>
+   <ContentLoader style={{"padding":"30"}} height={210} speed={2} primaryColor={'#f0f0f0'} secondaryColor={'#e0e0e0'}>
+       <Circle x={20} y={30} radius={20} />
+       <Rect x={70} y={20} height={5} radius={5} width={100} />
+       <Rect x={5} y={80} height={10} radius={5} width={350} />
+       <Rect x={5} y={100} height={200} radius={5} width={350} />
+   </ContentLoader>
   ) 
 }
 
