@@ -1,6 +1,5 @@
 //@flow
 import * as React from 'react'
-
 import Wrap from './Wrap'
 // Stylized
 import FacebookStyle from './stylized/FacebookStyle'
@@ -11,16 +10,6 @@ import ListStyle from './stylized/ListStyle'
 import Rect from './custom/Rect'
 import Circle from './custom/Circle'
 
-export type Props = {
-  style: {[key: string]: any},
-  type: string,
-  speed: number,
-  width: number,
-  height: number,
-  primaryColor: string,
-  secondaryColor: string,
-}
-
 type State = {
   style: {[key: string]: any},
   type: string,
@@ -30,6 +19,11 @@ type State = {
   primaryColor: string,
   secondaryColor: string,
 }
+
+export type Props = {
+  children?: React.ChildrenArray<*>,
+} & State
+
 
 class ContentLoader extends React.Component<Props, State> {
   static defaultProps = {

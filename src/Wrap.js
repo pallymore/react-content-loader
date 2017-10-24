@@ -2,13 +2,9 @@
 import * as React from 'react'
 import uuid from 'uuid'
 
-import type { Props as ContentLoaderProps } from './index';
+import type { Props } from './index';
 
-export type WrapProps = {
-  children?: React.ChildrenArray<*>
-} & ContentLoaderProps
-
-const Wrap = (props: WrapProps): React.Element<*> => {
+const Wrap = (props: Props): React.Element<*> => {
   let idClip = uuid.v1()
   let idGradient = uuid.v1()
 
